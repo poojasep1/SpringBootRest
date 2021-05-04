@@ -26,7 +26,6 @@ public class StudentService {
 		System.out.println("controllers add student");
 		students.add(student);
 	}
-
 	public void updateStudent(Student student, int id) {
 		for(int i = 0; i< students.size(); i++) {
 			Student s = students.get(0);
@@ -35,6 +34,10 @@ public class StudentService {
 				return;
 			}
 		}
+	}
+
+	public void removeStudent(int id) {
+		students.removeIf(s -> s.getId() == id);
 	}
 
 }
